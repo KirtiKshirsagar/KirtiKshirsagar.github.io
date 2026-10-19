@@ -110,17 +110,27 @@ const MARQUEE_ITEMS = [
 const EXPERIENCE = [
   {
     role: "Assistant Product Manager",
+    company: "InCred Money",
+    period: "Mar 2026 — Present",
+    location: "Pune, India",
+    tag: "Fintech",
+    highlights: [
+      "Gmail Sync Onboarding: improved the onboarding journey, driving a 15% increase in Gmail sync adoption and completion.",
+      "IPO Flow Revamp: revamping post-login IPO application journeys across web and app — benchmarking competitor experiences and defining flows for application status, rejections, and duplicate applications.",
+      "Account Aggregator: designed and documented user journeys to simplify financial data sharing and improve the customer experience.",
+    ],
+  },
+  {
+    role: "Assistant Product Manager",
     company: "FirstCry.com",
-    period: "Jun 2022 — Present",
+    period: "May 2022 — Mar 2026",
     location: "Pune, India",
     tag: "Ecommerce",
     highlights: [
-      "Owned the roadmap and delivery of a dynamic pricing and discount engine that increased checkout conversion by 24% while balancing acquisition and profitability.",
-      "Launched a GenAI-powered internal support tool on OpenAI APIs, automating 30% of manual triage and cutting average ticket resolution time by 18 minutes.",
-      "Executed SQL-driven analytics and A/B testing to optimize feature performance — increasing ROI and reducing marketing spend by 15%.",
-      "Analyzed onboarding funnel drop-offs with SQL and cohort analysis, prioritized improvements, and raised activation while shortening first-order completion time.",
-      "Established a unified requirement-gathering framework across QA and Engineering, cutting sprint-planning time by 20% and reducing post-release hotfixes.",
-      "Accelerated time-to-first-order by 10 days by redesigning the registration funnel around drop-off points found through cohort and funnel analysis.",
+      "Led a 5-person team to deliver a dynamic pricing and discount engine, increasing checkout conversion by 24% while balancing customer acquisition and profitability.",
+      "Launched a GenAI-powered internal support tool using OpenAI APIs, automating 30% of manual triage and reducing average ticket resolution time by 18 minutes.",
+      "Leveraged SQL, cohort analysis, and A/B testing to optimize product funnels and landing pages, increasing new user sign-ups by 18% and reducing marketing spend by 15%.",
+      "Established a unified requirements-gathering framework across QA and Engineering, reducing sprint-planning time by 20% and minimizing post-release hotfixes.",
     ],
   },
   {
@@ -130,9 +140,8 @@ const EXPERIENCE = [
     location: "Nashik, India",
     tag: "Enterprise SaaS",
     highlights: [
-      "Led customer discovery with enterprise stakeholders, translating user needs into prioritized PRDs, user stories, and scalable product requirements.",
-      "Identified workflow bottlenecks and shipped automation solutions that boosted throughput and reduced manual tasks.",
-      "Built low- and high-fidelity wireframes to validate concepts, align stakeholders, and improve usability before engineering build.",
+      "Conducted enterprise customer discovery, translating user needs into prioritized PRDs, user stories, and scalable requirements for cross-functional delivery.",
+      "Identified workflow bottlenecks and developed automation solutions; created low- and high-fidelity wireframes to validate concepts and improve usability before development.",
     ],
   },
 ];
@@ -149,6 +158,7 @@ const SKILL_GROUPS = [
       "GTM Strategy",
       "AI-Driven Product Thinking",
       "Executive Stakeholder Management",
+      "Vibe Coding",
     ],
   },
   {
