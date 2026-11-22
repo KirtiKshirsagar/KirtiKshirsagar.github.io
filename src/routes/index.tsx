@@ -10,6 +10,7 @@ import {
   Mail,
   MapPin,
   Phone,
+  Shirt,
   Sparkles,
   Target,
   Wallet,
@@ -246,6 +247,22 @@ const PROJECTS = [
     ],
     cta: "View Case Study",
     href: "https://app.notion.com/p/AI-Powered-Money-Management-Case-Study-3408693e70f980368af6e8b937b45fd9?source=copy_link",
+  },
+  {
+    title: "Wardrobe — AI Digital Closet & Stylist",
+    category: "AI Product · Fashion Tech · Personal Project",
+    icon: Shirt,
+    description:
+      "An AI-powered wardrobe management and styling application designed to help users organise their existing clothes, discover outfit combinations, and make faster decisions about what to wear.",
+    explored: [
+      "Visual Digital Closet & wardrobe cataloguing",
+      "Conversational AI Wardrobe Assistant",
+      "Occasion-based outfit recommendation engine",
+      "User journey mapping & audience segmentation",
+      "MVP scope prioritisation & problem validation",
+    ],
+    cta: "View Case Study",
+    href: "https://proud-periwinkle-bf1.notion.site/Wardrobe-3fe8693e70f980d998cfc044c3292dd5",
   },
 ];
 
@@ -560,10 +577,10 @@ function Portfolio() {
           <div className="mx-auto max-w-6xl px-6">
             <SectionHeading
               eyebrow="Projects"
-              title="Personal Project"
-              intro="A product I built independently to explore AI, product thinking, and practical user problems."
+              title="Personal Projects"
+              intro="A few products and experiments I’ve built independently to explore AI, product thinking, and practical user problems."
             />
-            <div className="mt-12 grid gap-5 md:grid-cols-1">
+            <div className="mt-12 grid gap-5 md:grid-cols-2">
               {PROJECTS.map((project, projectIndex) => (
                 <Reveal key={project.title} delay={projectIndex * 0.12}>
                   <TiltCard max={5} className="group relative flex h-full flex-col overflow-hidden rounded-4xl border border-border bg-card p-8 hover:border-primary/30 hover:shadow-[0_24px_48px_-20px_oklch(0.4_0.1_260/0.32)] sm:p-9">
