@@ -10,5 +10,5 @@
 <!-- LOVABLE:END -->
 
 ## Deployment
-- GitHub Pages deploys via .github/workflows/deploy.yml (bun + static prerender of "/" into dist/client, which the workflow uploads). vite.config.ts enables tanstackStart prerender; the nitro preset stays Lovable's default — don't add a static preset, it breaks the nitro Vite environment build.
+- GitHub Pages deploys via .github/workflows/deploy.yml (bun + static prerender of "/"). The build currently writes the prerendered site to dist/client, not .output/public, so the workflow detects whichever folder actually holds index.html and uploads that one — don't hardcode a single output path. vite.config.ts enables tanstackStart prerender; the nitro preset stays Lovable's default — don't add a static preset, it breaks the nitro Vite environment build.
 - GitHub Pages serves this site at the domain root (user-site repo named KirtiKshirsagar.github.io), so CI builds with the default base — never pass --base=/KirtiKshirsagar/, which breaks asset URLs at the root. Live URL: https://kirtikshirsagar.github.io/

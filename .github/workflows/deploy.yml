@@ -32,8 +32,22 @@ jobs:
       - name: Build static site
         run: bun run build
 
-      - name: Copy SPA shell as 404 fallback
-        run: cp dist/client/index.html dist/client/404.html
+      - name: Locate static output and add 404 fallback
+        id: out
+        run: |
+          if [ -f .output/public/index.html ]; then
+            dir=.output/public
+          elif [ -f dist/client/index.html ]; then
+            dir=dist/client
+          else
+            echo "No prerendered index.html found in .output/public or dist/client" >&2
+            ls -la . dist .output 2>&1 || true
+            exit 1
+          fi
+          cp "$dir/index.html" "$dir/404.html"
+          echo "dir=$dir" >> "$GITHUB_OUTPUT"
+          echo "Uploading from $dir"
+          ls -la "$dir"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -43,7 +57,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/client
+          path: ${{ steps.out.outputs.dir }}
 
   deploy:
     environment:
